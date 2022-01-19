@@ -43,6 +43,11 @@ const routes = [
     name: "LifeCycle",
     component: () => import(/* webpackChunkName: "LifeCycle" */ "../views/LifeCycle.vue"),
   },
+  {
+    path: "/provide-inject",
+    name: "ProvideInject",
+    component: () => import(/* webpackChunkName: "ProvideInject" */ "../views/ProvideInject.vue"),
+  },
 ];
 
 const router = createRouter({
