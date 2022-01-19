@@ -1,7 +1,7 @@
 /*
  * @Author: cui
  * @Date: 2022-01-14 15:03:50
- * @LastEditTime: 2022-01-17 18:16:16
+ * @LastEditTime: 2022-01-18 09:03:06
  * @LastEditors: Please set LastEditors
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: /t11-protal/.eslintrc.js
@@ -13,12 +13,15 @@
 
 module.exports = {
   root: true,
+
   env: {
     browser: true,
     node: true,
     es2021: true,
   },
+
   parser: 'vue-eslint-parser',
+
   extends: [
     'eslint:recommended',
     'plugin:vue/vue3-recommended',
@@ -27,6 +30,7 @@ module.exports = {
     // eslint-config-prettier 的缩写
     'prettier',
   ],
+
   // parserOptions: {
   //   ecmaVersion: 12,
   //   parser: '@typescript-eslint/parser',
@@ -38,6 +42,7 @@ module.exports = {
   // eslint-plugin-vue @typescript-eslint/eslint-plugin eslint-plugin-prettier的缩写
   // plugins: ['vue', '@typescript-eslint', 'prettier'],
   plugins: ['vue', 'prettier'],
+
   rules: {
     'no-var': 'error',
     'prettier/prettier': 'error',
@@ -45,6 +50,7 @@ module.exports = {
     'no-console': 'warn',
     // 禁用debugger
     'no-debugger': 'warn',
+    "generator-star-spacing": 'off',
     // 禁止出现重复的 case 标签
     'no-duplicate-case': 'warn',
     // 禁止出现空语句块
@@ -96,14 +102,14 @@ module.exports = {
     // 强制使用骆驼拼写法命名约定
     camelcase: 'warn',
     // 强制使用一致的缩进
-    indent: 'off',
+    indent: 1,
     // 强制在 JSX 属性中一致地使用双引号或单引号
     /*eslint jsx-quotes: ["error", "prefer-single"]*/
     // 'jsx-quotes': ["error", "prefer-single"],
     'jsx-quotes': 'warn',
     'quotes': ['1', 'single', 'avoid-escape'],
-    // singleQuote: true,
-    // semi: false,
+    singleQuote: true,
+    semi: false,
     // 强制可嵌套的块的最大深度4
     'max-depth': 'warn',
     // 强制最大行数 300
@@ -127,7 +133,6 @@ module.exports = {
     // 禁止出现多行空行
     'no-multiple-empty-lines': 'warn',
     // // 禁止出现;
-    // ;加不加都可以
     'semi': [1, 'always'],
     // 强制在块之前使用一致的空格
     'space-before-blocks': 'warn',
@@ -156,12 +161,17 @@ module.exports = {
     'no-case-declarations': 'warn',
     'no-async-promise-executor': 'warn',
   },
+
   globals: {
     defineProps: 'readonly',
     defineEmits: 'readonly',
     defineExpose: 'readonly',
     withDefaults: 'readonly',
   },
+
+  parserOptions: {
+    parser: '@babel/eslint-parser'
+  }
 }
 
 
