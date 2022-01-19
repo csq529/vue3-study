@@ -1,7 +1,7 @@
 /*
- * @Author: your name
+ * @Author: cui
  * @Date: 2021-09-06 17:51:33
- * @LastEditTime: 2022-01-17 16:22:53
+ * @LastEditTime: 2022-01-18 08:58:23
  * @LastEditors: Please set LastEditors
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: /vue-components/vue.config.js
@@ -28,16 +28,16 @@ module.exports = {
   },
 
   configureWebpack: () => {},
-  css: {
-    modules: false,
-    extract: IS_PROD,
-    sourceMap: false,
-  },
+  // css: {
+  //   modules: false,
+  //   extract: IS_PROD,
+  //   sourceMap: false,
+  // },
   devServer: {
     open: true,
     port: 8080,
     https: false,
-    hotOnly: true,
+    // hotOnly: true,
     proxy: {
       "/api": {
         target: "http://10.128.62.208",

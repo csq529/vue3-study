@@ -1,12 +1,12 @@
 <!--
  * @Author: your name
  * @Date: 2022-01-17 16:47:37
- * @LastEditTime: 2022-01-17 18:15:27
+ * @LastEditTime: 2022-01-19 09:31:17
  * @LastEditors: Please set LastEditors
  * @FilePath: /vue3-1.0/src/App.vue
 -->
 <template>
-  <div @click="loginTo">home</div>
+  <router-view></router-view>
 </template>
 <script>
 import { login } from "./api/login";
@@ -29,21 +29,16 @@ export default defineComponent({
         "&password=" +
         lockPassword
       login(data).then((res) => {
-        // eslint-disable-next-line no-console
-        console.log("resss:::::", res)
-      });
-    },
-  },
-});
+        console.log("resss:::::", res);
+      })
+    }
+  }
+})
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  margin: 0;
+  padding: 0;
 }
 </style>
