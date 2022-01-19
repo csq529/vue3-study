@@ -32,7 +32,12 @@ const routes = [
     path: "/computed",
     name: "Computed",
     component: () => import(/* webpackChunkName: "computed" */ "../views/computed.vue"),
-  }
+  },
+  {
+    path: "/parent-child",
+    name: "Parent",
+    component: () => import(/* webpackChunkName: "Parent" */ "../views/Parent.vue"),
+  },
 ];
 
 const router = createRouter({
