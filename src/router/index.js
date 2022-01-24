@@ -1,3 +1,11 @@
+/*
+ * @Author: cui
+ * @Date: 2022-01-17 18:04:47
+ * @LastEditors: cui
+ * @LastEditTime: 2022-01-24 11:46:33
+ * @FilePath: /vue3-jsj/src/router/index.js
+ * @Description: 
+ */
 
 import { createRouter, createWebHashHistory } from "vue-router";
 import Home from "../views/Home.vue";
@@ -47,6 +55,11 @@ const routes = [
     path: "/provide-inject",
     name: "ProvideInject",
     component: () => import(/* webpackChunkName: "ProvideInject" */ "../views/ProvideInject.vue"),
+  },
+  {
+    path: "/pinia",
+    name: "Pinia",
+    component: () => import(/* webpackChunkName: "Pinia" */ "../views/pinia.vue"),
   },
 ];
 
